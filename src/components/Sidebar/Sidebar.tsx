@@ -39,7 +39,7 @@ const Sidebar = () => {
     ];
     return (
         <Box
-            height={"100vh"}
+            height={{base: "100dvh", md: "100vh"}}
             borderRight={"1px solid"}
             borderColor={"whiteAlpha.300"}
             py={8}
@@ -121,7 +121,7 @@ const Sidebar = () => {
                         marginTop={"auto"}
                         as={RouterLink}
                         display={"flex"}
-                        to={'/auth'}
+                        to={"/auth"}
                         alignItems={"center"}
                         gap={4}
                         _hover={{ bg: "whiteAlpha.400" }}
@@ -130,7 +130,7 @@ const Sidebar = () => {
                         w={{ base: 10, md: "full" }}
                         justifyContent={{ base: "center", md: "flex-start" }}
                     >
-                        <BiLogOut size={25}/>
+                        <BiLogOut size={25} />
                         <Box display={{ base: "none", md: "block" }}>
                             Logout
                         </Box>

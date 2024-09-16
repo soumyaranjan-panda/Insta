@@ -1,9 +1,21 @@
-import React from 'react'
+import PostFooter from "./PostFooter";
+import PostHeader from "./PostHeader";
 
-const FeedPost = () => {
-  return (
-    <div>FeedPost</div>
-  )
+interface propsType{
+    img: string,
+    username: string,
+    avatar: string
 }
 
-export default FeedPost
+const FeedPost = ({img, username, avatar}: propsType) => {
+    return (
+        <>
+            <PostHeader username={username} avatar = {avatar}/>
+            <PostFooter image = {img} username={username}/>
+        </>
+    );
+};
+
+
+
+export default FeedPost;
